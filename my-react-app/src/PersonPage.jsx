@@ -37,8 +37,8 @@ Happy Mother's Day`,
   },
   4: {
     name: "Esom",
-    photo: "/photos/person4.jpg",
-    message: "The best woman I know. Your love and strength inspire me every day. Happy Mothers' Day!",
+    photo: "/photos/Screenshot 2026-03-15 093808.png",
+    message: "Happy Mothers' Day! Thank you for giving me confidence in myself.I will forever cherish you in my heart. I love you.",
     color: "#FF8A65",
   },
 };
