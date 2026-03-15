@@ -17,7 +17,7 @@ const people = {
     name: "Nne",
     photo: "/photos/WhatsApp Image 2026-03-15 at 09.14.59.jpeg",
     message: `Happy Mother's Day to the best mother ever.
-    
+
 Thank you for loving me.
 Thank you for correcting me.
 Thank you for training me up.
@@ -52,13 +52,13 @@ const styles = {
     justifyContent: "center",
     background: "url('/photos/Untitled%20design.png') center/cover no-repeat",
     fontFamily: "'Georgia', serif",
-    padding: "40px",
+    padding: "20px",
     boxSizing: "border-box",
   },
   card: {
     background: "rgba(255,255,255,0.92)",
     borderRadius: "12px 28px 16px 24px / 20px 14px 26px 18px",
-    padding: "40px",
+    padding: "clamp(20px, 5vw, 40px)",
     maxWidth: "600px",
     width: "100%",
     boxShadow: "0 8px 40px rgba(0,0,0,0.15)",
@@ -80,9 +80,9 @@ export default function PersonPage() {
         <h2
           style={{
             fontFamily: "'Dancing Script', 'Brush Script MT', cursive",
-            fontSize: "52px",
+            fontSize: "clamp(36px, 10vw, 52px)",
             color: person.color,
-            margin: "0 0 24px 0",
+            margin: "0 0 20px 0",
             fontWeight: 700,
           }}
         >
@@ -92,12 +92,12 @@ export default function PersonPage() {
         {/* Photo */}
         <div
           style={{
-            width: "200px",
-            height: "200px",
+            width: "clamp(140px, 40vw, 200px)",
+            height: "clamp(140px, 40vw, 200px)",
             borderRadius: "12px",
             overflow: "hidden",
             border: `3px solid ${person.color}`,
-            marginBottom: "24px",
+            marginBottom: "20px",
             boxShadow: `0 4px 20px ${person.color}66`,
           }}
         >
@@ -119,8 +119,8 @@ export default function PersonPage() {
             background: `${person.color}22`,
             border: `2px solid ${person.color}66`,
             borderRadius: "10px 20px 10px 20px / 14px 10px 18px 10px",
-            padding: "20px 24px",
-            fontSize: "18px",
+            padding: "16px 20px",
+            fontSize: "clamp(15px, 3.5vw, 18px)",
             lineHeight: "1.7",
             color: "#3a1a1a",
             whiteSpace: "pre-line",
@@ -133,7 +133,7 @@ export default function PersonPage() {
         <button
           onClick={() => navigate("/")}
           style={{
-            marginTop: "28px",
+            marginTop: "24px",
             padding: "12px 28px",
             background: person.color,
             border: "none",
@@ -141,7 +141,7 @@ export default function PersonPage() {
             cursor: "pointer",
             color: "white",
             fontWeight: "700",
-            fontSize: "16px",
+            fontSize: "clamp(14px, 3vw, 16px)",
             fontFamily: "'Georgia', serif",
             boxShadow: `0 4px 15px ${person.color}88`,
             transition: "transform 0.2s",
