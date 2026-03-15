@@ -3,8 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 const people = {
   1: {
     name: "Muna",
-    photo: "/photos/person1.jpg",
-    message: "You have always been my rock. Thank you for everything you do every single day. I love you more than words can say.",
+    photo: "/photos/WhatsApp Image 2026-03-15 at 12.54.47.jpeg",
+    message: "Happy Mother's Day.",
     color: "#F48FB1",
   },
   2: {
@@ -38,7 +38,7 @@ Happy Mother's Day`,
   4: {
     name: "Esom",
     photo: "/photos/Screenshot 2026-03-15 093808.png",
-    message: "Happy Mothers' Day! Thank you for giving me confidence in myself.I will forever cherish you in my heart. I love you.",
+    message: "Happy Mother's Day! Thank you for giving me confidence in myself.I will forever cherish you in my heart. I love you.",
     color: "#FF8A65",
   },
 };
