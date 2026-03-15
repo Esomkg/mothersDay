@@ -4,30 +4,64 @@ const people = {
   1: {
     name: "Muna",
     photo: "/photos/person1.jpg",
-    message:
-      "You have always been my rock. Thank you for everything you do every single day. I love you more than words can say. ",
+    message: "You have always been my rock. Thank you for everything you do every single day. I love you more than words can say.",
     color: "#F48FB1",
   },
   2: {
     name: "Lolo",
     photo: "/photos/WhatsApp Image 2026-03-14 at 02.00.27.jpeg",
-    message:
-      "Dear Mummy , Happy Mother’s Day . Thank you for all your love and I wish you  happiness , joy and fulfilment this Mother’s Day . May God bless you and shine his face upon you . Amen ! ",
+    message: "Dear Mummy, Happy Mother's Day. Thank you for all your love and I wish you happiness, joy and fulfilment this Mother's Day. May God bless you and shine his face upon you. Amen!",
     color: "#FFB74D",
   },
   3: {
     name: "Nne",
-    photo: "/photos/person3.jpg",
-    message:
-      "You've always been there with a kind word and a warm heart. So grateful for you. ",
+    photo: "/photos/WhatsApp Image 2026-03-15 at 09.14.59.jpeg",
+    message: `Happy Mother's Day to the best mother ever.
+    
+Thank you for loving me.
+Thank you for correcting me.
+Thank you for training me up.
+Thank you for sacrificing for me.
+Thank you for all the sleepless nights you've had for me.
+Thank you for caring for me.
+
+I can't imagine my life without you.
+I am shaped because of your love and care.
+I pray to never take it for granted.
+Thank you for being a great example of what it means to do well in life.
+Thank you for being someone I aspire to be like.
+I'm really happy God made you my mother.
+
+Happy Mother's Day`,
     color: "#F8A5C2",
   },
   4: {
     name: "Esom",
     photo: "/photos/person4.jpg",
-    message:
-      "The best woman I know. Your love and strength inspire me every day. Happy Mothers' Day!",
+    message: "The best woman I know. Your love and strength inspire me every day. Happy Mothers' Day!",
     color: "#FF8A65",
+  },
+};
+
+const styles = {
+  page: {
+    width: "100vw",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "url('/photos/Untitled%20design.png') center/cover no-repeat",
+    fontFamily: "'Georgia', serif",
+    padding: "40px",
+    boxSizing: "border-box",
+  },
+  card: {
+    background: "rgba(255,255,255,0.92)",
+    borderRadius: "12px 28px 16px 24px / 20px 14px 26px 18px",
+    padding: "40px",
+    maxWidth: "600px",
+    width: "100%",
+    boxShadow: "0 8px 40px rgba(0,0,0,0.15)",
   },
 };
 
@@ -39,30 +73,9 @@ export default function PersonPage() {
   if (!person) return <div>Person not found</div>;
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background:
-          "url('/photos/Untitled%20design.png') center/cover no-repeat",
-        fontFamily: "'Georgia', serif",
-        padding: "40px",
-        boxSizing: "border-box",
-      }}
-    >
-      <div
-        style={{
-          background: "rgba(255,255,255,0.92)",
-          borderRadius: "12px 28px 16px 24px / 20px 14px 26px 18px",
-          padding: "40px",
-          maxWidth: "600px",
-          width: "100%",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.15)",
-        }}
-      >
+    <div style={styles.page}>
+      <div style={styles.card}>
+
         {/* Name */}
         <h2
           style={{
@@ -110,6 +123,7 @@ export default function PersonPage() {
             fontSize: "18px",
             lineHeight: "1.7",
             color: "#3a1a1a",
+            whiteSpace: "pre-line",
           }}
         >
           {person.message}
@@ -137,6 +151,7 @@ export default function PersonPage() {
         >
           ← Back
         </button>
+
       </div>
     </div>
   );
