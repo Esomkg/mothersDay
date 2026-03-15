@@ -2,38 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const buttons = [
-  {
-    id: 1,
-    label: "1",
-    emoji: "🌸",
-    text: "With Love",
-    color: "#F48FB1",
-    hover: "#F06292",
-  },
-  {
-    id: 2,
-    label: "2",
-    emoji: "💐",
-    text: "You're Amazing",
-    color: "#FFB74D",
-    hover: "#FFA726",
-  },
-  {
-    id: 3,
-    label: "3",
-    emoji: "🌷",
-    text: "So Grateful",
-    color: "#F8A5C2",
-    hover: "#F48FB1",
-  },
-  {
-    id: 4,
-    label: "4",
-    emoji: "✨",
-    text: "Best Mom",
-    color: "#FF8A65",
-    hover: "#FF7043",
-  },
+  { id: 1, label: "1", emoji: "🌸", text: "With Love",     color: "#F48FB1", hover: "#F06292" },
+  { id: 2, label: "2", emoji: "💐", text: "You're Amazing", color: "#FFB74D", hover: "#FFA726" },
+  { id: 3, label: "3", emoji: "🌷", text: "So Grateful",    color: "#F8A5C2", hover: "#F48FB1" },
+  { id: 4, label: "4", emoji: "✨", text: "Best Mom",       color: "#FF8A65", hover: "#FF7043" },
 ];
 
 export default function MothersDay() {
@@ -48,11 +20,10 @@ export default function MothersDay() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background:
-          "url('/photos/Untitled%20design.png') center/cover no-repeat",
+        background: "url('/photos/Untitled%20design.png') center/cover no-repeat",
         fontFamily: "'Georgia', serif",
         margin: 0,
-        padding: 0,
+        padding: "20px",
         boxSizing: "border-box",
         position: "relative",
         overflow: "hidden",
@@ -65,26 +36,26 @@ export default function MothersDay() {
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
-          padding: "50px 40px",
+          padding: "40px 20px",
           boxSizing: "border-box",
         }}
       >
-        <div style={{ position: "relative", marginBottom: "50px" }}>
+        {/* Title */}
+        <div style={{ position: "relative", marginBottom: "50px", padding: "0 10px" }}>
           <div
             style={{
               position: "absolute",
-              inset: "-22px -50px",
+              inset: "-22px -30px",
               background: "white",
               borderRadius: "12px 28px 16px 24px / 20px 14px 26px 18px",
-              boxShadow:
-                "0 6px 30px rgba(244,143,177,0.3), 0 2px 10px rgba(0,0,0,0.08)",
+              boxShadow: "0 6px 30px rgba(244,143,177,0.3), 0 2px 10px rgba(0,0,0,0.08)",
               zIndex: 0,
             }}
           />
           <div
             style={{
               position: "absolute",
-              inset: "-14px -38px",
+              inset: "-14px -20px",
               background: "transparent",
               borderRadius: "10px 22px 12px 20px / 16px 10px 22px 14px",
               border: "2px solid rgba(244,143,177,0.35)",
@@ -94,7 +65,7 @@ export default function MothersDay() {
           <h1
             style={{
               fontFamily: "'Dancing Script', 'Brush Script MT', cursive",
-              fontSize: "76px",
+              fontSize: "clamp(36px, 8vw, 76px)",
               color: "#c2185b",
               margin: 0,
               letterSpacing: "2px",
@@ -102,17 +73,18 @@ export default function MothersDay() {
               fontWeight: 700,
               position: "relative",
               zIndex: 1,
-              whiteSpace: "nowrap",
+              textAlign: "center",
             }}
           >
-            Happy Mothers' day
+            Happy Mothers' Day
           </h1>
         </div>
 
+        {/* Buttons */}
         <div
           style={{
             display: "flex",
-            gap: "22px",
+            gap: "16px",
             flexWrap: "wrap",
             justifyContent: "center",
           }}
@@ -126,13 +98,13 @@ export default function MothersDay() {
                 onMouseLeave={() => setHovered(null)}
                 onClick={() => navigate(`/person/${btn.id}`)}
                 style={{
-                  width: "170px",
-                  height: "58px",
+                  width: "clamp(130px, 22vw, 170px)",
+                  height: "56px",
                   background: isHovered ? btn.hover : btn.color,
                   border: "none",
                   borderRadius: "30px",
                   cursor: "pointer",
-                  fontSize: isHovered ? "14px" : "16px",
+                  fontSize: isHovered ? "13px" : "clamp(14px, 3vw, 16px)",
                   fontFamily: "'Georgia', serif",
                   color: "white",
                   fontWeight: "700",
