@@ -21,7 +21,6 @@ export default function App() {
         src="/square---beautiful-onyinye-official-video-ft-rick-ross.mp3"
         loop
       />
-
       {!started && (
         <div
           onClick={handleStart}
@@ -36,13 +35,15 @@ export default function App() {
             justifyContent: "center",
             cursor: "pointer",
             backdropFilter: "blur(6px)",
+            padding: "20px",
+            textAlign: "center",
           }}
         >
-          <div style={{ fontSize: "60px", marginBottom: "20px" }}>🌸</div>
+          <div style={{ fontSize: "clamp(40px, 10vw, 60px)", marginBottom: "20px" }}>🌸</div>
           <h2
             style={{
               fontFamily: "'Dancing Script', 'Brush Script MT', cursive",
-              fontSize: "48px",
+              fontSize: "clamp(28px, 8vw, 48px)",
               color: "#c2185b",
               margin: "0 0 12px 0",
             }}
@@ -51,7 +52,7 @@ export default function App() {
           </h2>
           <p
             style={{
-              fontSize: "18px",
+              fontSize: "clamp(14px, 4vw, 18px)",
               color: "#7a3b2a",
               fontFamily: "Georgia, serif",
             }}
@@ -60,7 +61,6 @@ export default function App() {
           </p>
         </div>
       )}
-
       <Routes>
         <Route path="/" element={<MothersDay />} />
         <Route path="/person/:id" element={<PersonPage />} />
